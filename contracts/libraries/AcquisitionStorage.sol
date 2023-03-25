@@ -2,6 +2,9 @@
 pragma solidity ^0.8.17;
 import "../../lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 import "../../lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol";
+import "../../lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
+import "../../lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Holder.sol";
+import "../../lib/openzeppelin-contracts/contracts/token/ERC1155/IERC1155.sol";
 import "../../lib/chainlink-brownie-contracts/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol";
 
 

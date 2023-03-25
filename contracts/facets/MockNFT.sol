@@ -1,10 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.17;
 
 import "../../lib/openzeppelin-contracts/contracts/token/ERC1155/ERC1155.sol";
 import "../../lib/openzeppelin-contracts/contracts/utils/Strings.sol";
 import "../../lib/openzeppelin-contracts/contracts/access/Ownable.sol";
-contract Assets is ERC1155, Ownable {
+contract MockNFT is ERC1155, Ownable {
     uint256 public constant House = 1;
     uint256 public constant Land = 2;
 
