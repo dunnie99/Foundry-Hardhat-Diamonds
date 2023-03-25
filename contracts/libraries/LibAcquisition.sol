@@ -130,17 +130,13 @@ library LibAquisition{
         emit onlyOwnerWithdrawal(msg.sender, _propertyNftId, _recipientAddress, _tokenAddress);
     }
 
-    function withdrawTokens(IERC20 _tokenAddress, address _recipientAddress, uint _amount) external onlyOwner(){
+    function withdrawTokens(IERC20 _tokenAddress, address _recipientAddress, uint _amount) internal onlyOwner() {
         require(_recipientAddress != address(0), "Invalid address");
         require(_amount <= _tokenAddress.balanceOf(address(this)), "Insufficient acount balance");
         _tokenAddress.transferFrom(address(this), _recipientAddress, _amount);
     }
 
-
-
-    fallback() external payable {}
-
-    receive() external payable {}
+    
 }
 
 

@@ -53,7 +53,19 @@ contract AquisitionFacet{
         buyProperty(uint256 _propertyId, AggregatorV3Interface _token2swap, IERC20 _tokenAddress);
     }
 
+    function withdrawNFT_(IERC1155 _tokenAddress, 
+        address _recipientAddress, 
+        uint256 _propertyNftId, 
+        uint256 _propertyID) external {
+        withdrawNFT(IERC1155 _tokenAddress, address _recipientAddress, uint256 _propertyNftId, uint256 _propertyID);
+    }
 
+    function withdrawTokens_(IERC20 _tokenAddress, 
+        address _recipientAddress, 
+        uint _amount
+        ) external {
+        withdrawTokens(IERC20 _tokenAddress, address _recipientAddress, uint _amount);
+    }
 
 
 
