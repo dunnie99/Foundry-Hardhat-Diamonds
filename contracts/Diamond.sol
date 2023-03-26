@@ -10,10 +10,10 @@ pragma solidity ^0.8.17;
 
 import {LibDiamond} from "./libraries/LibDiamond.sol";
 import {IDiamondCut} from "./interfaces/IDiamondCut.sol";
-import "../lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
-import "../lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Holder.sol";
+// import "../lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
+import "../contracts/interfaces/IERC1155Holder.sol";
 
-contract Diamond is ERC1155Holder {
+contract Diamond is IERC1155Holder {
     constructor(address _contractOwner, address _diamondCutFacet) payable {
         LibDiamond.setContractOwner(_contractOwner);
 

@@ -3,13 +3,13 @@ pragma solidity ^0.8.17;
 
 import "../libraries/LibAcquisition.sol";
 import "../libraries/AcquisitionStorage.sol";
-import "../../lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
-import "../../lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Holder.sol";
+// import "../../lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Receiver.sol";
+// import "../../lib/openzeppelin-contracts/contracts/token/ERC1155/utils/ERC1155Holder.sol";
 
 
 
 
-contract AcquisitionFacet is ERC1155Holder{
+contract AcquisitionFacet{
 
     function setState() external returns (bool) {}
     function listProperty_(
@@ -63,9 +63,6 @@ contract AcquisitionFacet is ERC1155Holder{
         ) external {
         LibAcquisition.withdrawTokens(_tokenAddress, _recipientAddress, _amount);
     }
-
-
-
 
 
 
